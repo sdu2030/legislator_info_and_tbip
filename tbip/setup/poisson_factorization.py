@@ -31,6 +31,14 @@ flags.DEFINE_integer("senate_session",
 flags.DEFINE_integer("seed",
                      default=123,
                      help="Random seed to be used.")
+
+### 10/25/2025 - Added code to read in the flags --clean_data and --output:
+flags.DEFINE_string("clean_data", default="clean",
+                    help="Subdirectory containing cleaned data.")
+flags.DEFINE_string("output", default="pf-fits",
+                    help="Output directory for saved results.")
+###
+
 FLAGS = flags.FLAGS
 
 
@@ -413,8 +421,8 @@ def main(argv):
     source_dir = os.path.join(
         source_dir, "tbip/{}".format(FLAGS.senate_session))
   # Data directory must have the following files: counts.npz, vocabulary.txt.
-  data_dir = os.path.join(source_dir, "clean")
-  save_dir = os.path.join(source_dir, "pf-fits")
+  data_dir = os.path.join(source_dir, FLAGS.clean_data) # 10/25/2025 Edited to read in flag input
+  save_dir = os.path.join(source_dir, FLAGS.output) # 10/25/2025 Edited to read in flag input
 
   if not os.path.exists(save_dir):
     os.makedirs(save_dir)

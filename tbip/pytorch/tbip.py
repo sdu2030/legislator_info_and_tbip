@@ -583,7 +583,7 @@ def main(argv):
       batch_size=FLAGS.batch_size,
       shuffle=True,
       **kwargs)
-  iterator = data_loader.__iter__()
+  iterator = iter(data_loader)
 
   if FLAGS.pre_initialize_parameters:
     fit_dir = os.path.join(source_dir, FLAGS.fits)#"pf-fits")
@@ -632,10 +632,10 @@ def main(argv):
   start_time = time.time()
   for step in range(FLAGS.max_steps):
     try:
-      document_indices, author_indices, counts = iterator.next()
+      document_indices, author_indices, counts = next(iterator)
     except StopIteration:
-      iterator = data_loader.__iter__()
-      document_indices, author_indices, counts = iterator.next()
+      iterator = iter(data_loader)
+      document_indices, author_indices, counts = next(iterator)
     document_indices = document_indices.to(device)
     author_indices = author_indices.to(device)
     counts = counts.to(device)
@@ -679,5 +679,6 @@ def main(argv):
 
 
 if __name__ == "__main__":
+  print("running app")
   app.run(main)
   
