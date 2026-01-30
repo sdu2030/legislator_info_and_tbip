@@ -1,1 +1,0 @@
-cd .. && python pytorch/tbip.py --data=tweets_cong_115_116 --clean_data_dir=clean2 --max_steps=150000 --batch_size=1024 --num_topics=50 --fits=mallet_results/tbip_expanded_preprocessing_k50 --pre_initialize_parameters_with_precomuted_matrices --output=tbip-og-k50-expanded-vocab-with-mallet-scaled-topics

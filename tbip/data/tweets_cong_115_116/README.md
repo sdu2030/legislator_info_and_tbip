@@ -1,3 +1,0 @@
-Twitter data for the 115th Congress is acquired from: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UIVHQR. Please check the link for more details. If using this data, please cite: **Littman, Justin, 2017, "115th U.S. Congress Tweet Ids", https://doi.org/10.7910/DVN/UIVHQR, Harvard Dataverse, V5, UNF:6:pa6q3/72341rRixB7ez15Q== [fileUNF]**
-
-Twitter data for the 116th Congress is acquired from: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/MBOJNS. Please check the link for more details. If using this data, please cite: **Wrubel, Laura; Kerchner, Daniel, 2020, "116th U.S. Congress Tweet Ids", https://doi.org/10.7910/DVN/MBOJNS, Harvard Dataverse, V1, UNF:6:WKfCGiEnn3FJi7QhnswUsA== [fileUNF]**
